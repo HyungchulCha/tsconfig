@@ -27,7 +27,7 @@ const tsconfig = {
   */
   compilerOptions: {
     /* Basic Options */
-    incremental: true, // 이전 컴파일에서 디스크의 파일로 정보를 읽거나/기록하여 증분 컴파일을 활성화합니다. 이 파일은 --tsBuildInfoFile 플래그로 컨트롤합니다. composite이 켜져있으면 true 아니면 false
+    incremental: true, // 이전 컴파일에서 디스크의 파일로 정보를 읽거나 기록하여 증분 컴파일을 활성화합니다. 이 파일은 --tsBuildInfoFile 플래그로 컨트롤합니다. composite이 켜져있으면 true 아니면 false
     target: 'es5' /* Specify ECMAScript target version: 'ES3' (default), 'ES5', 'ES2015', 'ES2016', 'ES2017', 'ES2018', 'ES2019', 'ES2020', 'ES2021', or 'ESNEXT'. */,
     module: 'commonjs',
     /*
@@ -48,33 +48,33 @@ const tsconfig = {
     jsx: 'preserve', // .tsx 파일에서 JSX 지원: "React", "Preserve", "react-native". JSX를 확인하세요.
     declaration: false, // 해당하는 .d.ts 파일을 생성합니다.
     declarationMap: false, // 해당하는 '.d.ts'파일 각각에 대한 소스 맵을 생성합니다.
-    sourceMap: true /* Generates corresponding '.map' file. */,
-    outFile: './' /* Concatenate and emit output to single file. */,
-    outDir: './build' /* Redirect output structure to the directory. */,
-    rootDir: './' /* Specify the root directory of input files. Use to control the output directory structure with --outDir. */,
+    sourceMap: true, // '.map' 파일 생성 여부
+    outFile: './', // 단일 파일로 합쳐서 출력합니다.
+    outDir: './build', // 해당 디렉토리로 결과 구조를 보냅니다.
+    rootDir: './', // 입력 파일의 루트 디렉토리(rootDir) 설정으로 --outDir로 결과 디렉토리 구조를 조작할 때 사용됩니다.
     composite: true, // TypeScript가 프로젝트를 컴파일하기 위해 참조된 프로젝트의 출력을 찾을 위치를 결정할 수 있는지 확인합니다.
-    tsBuildInfoFile: './' /* Specify file to store incremental compilation information */,
-    removeComments: true /* Do not emit comments to output. */,
-    noEmit: true /* Do not emit outputs. */,
+    tsBuildInfoFile: './', // 증분 컴파일 정보를 저장할 파일
+    removeComments: true, // 주석 삭제 여부
+    noEmit: true, // 결과 파일 내보낼지 여부
     importHelpers: false, // tslib에서 방출된 헬퍼를 import 합니다.
     downlevelIteration: false, // ES5 또는 ES3를 대상으로 할 때 for..of, 스프레드와 구조분해할당에서 이터러블을 완전히 지원합니다.
     isolatedModules: false, // 추가 검사를 수행하여 별도의 컴파일 (예를 들어 트랜스파일된 모듈 혹은 @babel/plugin-transform-typescript) 이 안전한지 확인합니다
 
     /* Strict Type-Checking Options */
-    strict: true /* Enable all strict type-checking options. */,
-    noImplicitAny: true /* Raise error on expressions and declarations with an implied 'any' type. */,
-    strictNullChecks: true /* Enable strict null checks. */,
-    strictFunctionTypes: true /* Enable strict checking of function types. */,
-    strictBindCallApply: true /* Enable strict 'bind', 'call', and 'apply' methods on functions. */,
-    strictPropertyInitialization: true /* Enable strict checking of property initialization in classes. */,
-    noImplicitThis: true /* Raise error on 'this' expressions with an implied 'any' type. */,
+    strict: true, // 모든 엄격한 타입-체킹 옵션 활성화 여부
+    noImplicitAny: true, // 'any' 타입으로 구현된 표현식 혹은 정의 에러처리 여부
+    strictNullChecks: true, // 엄격한 null 확인 여부
+    strictFunctionTypes: true, // 함수 타입에 대한 엄격한 확인 여부
+    strictBindCallApply: true, // 함수에 엄격한 'bind', 'call' 그리고 'apply' 메소드 사용 여부
+    strictPropertyInitialization: true, // 클래스의 값 초기화에 엄격한 확인 여부
+    noImplicitThis: true, // 'any' 타입으로 구현된 'this' 표현식 에러처리 여부
     alwaysStrict: false, // strict mode에서 파싱하고 각 소스 파일에 대해 "use strict"를 내보냅니다.
 
     /* Additional Checks */
-    noUnusedLocals: true /* Report errors on unused locals. */,
-    noUnusedParameters: true /* Report errors on unused parameters. */,
-    noImplicitReturns: true /* Report error when not all code paths in function return a value. */,
-    noFallthroughCasesInSwitch: true /* Report errors for fallthrough cases in switch statement. */,
+    noUnusedLocals: true, // 사용되지 않은 지역 변수에 대한 에러보고 여부
+    noUnusedParameters: true, // 사용되지 않은 파라미터에 대한 에러보고 여부
+    noImplicitReturns: true, // 함수에서 코드의 모든 경로가 값을 반환하지 않을 시 에러보고 여부
+    noFallthroughCasesInSwitch: true, // switch문에서 fallthrough 케이스에 대한 에러보고 여부
     noUncheckedIndexedAccess: true /* Include 'undefined' in index signature results */,
     noImplicitOverride: true /* Ensure overriding members in derived classes are marked with an 'override' modifier. */,
     noPropertyAccessFromIndexSignature: true /* Require undeclared properties from index signatures to use element accesses. */,
@@ -82,17 +82,17 @@ const tsconfig = {
     /* Module Resolution Options */
     moduleResolution: 'node', // 모듈 해석 방법 결정. Node.js/io.js 스타일 해석의 경우, "Node" 또는 "Classic" 중 하나입니다.
     baseUrl: './src', // 비-상대적 모듈 이름을 해석하기 위한 기본 디렉터리.
-    paths: {} /* A series of entries which re-map imports to lookup locations relative to the 'baseUrl'. */,
-    rootDirs: [] /* List of root folders whose combined content represents the structure of the project at runtime. */,
-    typeRoots: [] /* List of folders to include type definitions from. */,
-    types: [] /* Type declaration files to be included in compilation. */,
+    paths: {}, // baseUrl'를 기준으로 불러올 모듈의 위치를 재지정하는 엔트리 시리즈
+    rootDirs: [], // 결합된 컨텐츠가 런타임에서의 프로젝트 구조를 나타내는 루트 폴더들의 목록
+    typeRoots: [], // 타입 정의를 포함할 폴더 목록, 설정 안 할 시 기본적으로 ./node_modules/@types로 설정
+    types: [], // 컴파일중 포함될 타입 정의 파일 목록
     allowSyntheticDefaultImports: false, // default export가 없는 모듈에서 default imports를 허용합니다. 코드 방출에는 영향을 주지 않으며, 타입 검사만 수행합니다.
     esModuleInterop: false, // 런타임 바벨 생태계 호환성을 위한 __importStar와 __importDefault 헬퍼를 내보내고 타입 시스템 호환성을 위해 --allowSyntheticDefaultImports를 활성화합니다.
-    preserveSymlinks: true /* Do not resolve the real path of symlinks. */,
+    preserveSymlinks: true, // symlik의 실제 경로를 처리하지 않을 지 여부
     allowUmdGlobalAccess: false, // 모듈에서 전역 UMD 접근을 허용합니다.
 
     /* Source Map Options */
-    sourceRoot: '' /* Specify the location where debugger should locate TypeScript files instead of source locations. */,
+    sourceRoot: '', // 소스 위치 대신 디버거가 알아야 할 TypeScript 파일이 위치할 곳
     mapRoot: '', // 디버거가 생성된 위치가 아닌 맵 파일의 위치를 지정합니다. .map 파일이 .js 파일과 다른 위치에 런타임 시 위치할 경우 이 옵션을 사용하세요. 지정된 위치는 sourceMap에 포함되어 맵 파일이 위치할 디버거를 지정합니다. 이 플래그는 지정된 경로를 작성하지 않고 해당 위치에 맵 파일을 생성합니다. 대신 파일을 지정된 경로로 이동하는 빌드 후 단계를 작성하십시오.
     inlineSourceMap: false, // 별도의 파일 대신 소스 맵으로 단일 파일을 내보냅니다.
     inlineSources: false, // 단일 파일 내에서 소스 맵과 함께 소스를 내보냅니다. --inlineSourceMap 또는 --sourceMap을 설정해야 합니다.
@@ -102,7 +102,7 @@ const tsconfig = {
     emitDecoratorMetadata: false, // 소스에 데코레이터 선언에 대한 설계-타입 메타 데이터를 내보냅니다.
 
     /* Advanced Options */
-    skipLibCheck: true /* Skip type checking of declaration files. */,
+    skipLibCheck: true, // 정의 파일의 타입 확인을 건너 뛸 지 여부
     forceConsistentCasingInFileNames: false, // 동일 파일 참조에 대해 일관성 없는 대소문자를 비활성화합니다.
 
     /* Etc */
